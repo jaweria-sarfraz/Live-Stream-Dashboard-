@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise SQL Analytics Shell</title>
+    <style>
+        /* Modern Minimalist Reset & Core Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0c0c0c; /* Ultra Dark Theme */
+            color: #e0e0e0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Premium Header Styling */
+        header {
+            border-bottom: 1px solid #2d2d2d;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .status-badge {
+            background-color: #1a1a1a;
+            border: 1px solid #00ff66; /* Subtle glowing indicator */
+            color: #00ff66;
+            padding: 6px 14px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 3px;
+        }
+
+        /* Sleek Analytics Cards Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: #121212; /* ControlDarkDark Contrast Look */
+            border: 1px solid #222222;
+            padding: 24px;
+            border-radius: 4px;
+        }
+
+        .card-title {
+            font-size: 12px;
+            color: #888888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .card-value {
+            font-size: 28px;
+            font-weight: 300;
+            color: #ffffff;
+        }
+
+        /* High-Contrast Data Table */
+        .table-container {
+            background-color: #121212;
+            border: 1px solid #222222;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background-color: #181818;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 16px;
+            border-bottom: 1px solid #2d2d2d;
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        tr:hover {
+            background-color: #161616; /* Subtle row highlight on hover */
+        }
+
+        .status-pill {
+            display: inline-block;
+            padding: 4px 8px;
+            font-size: 11px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .status-completed { background-color: rgba(0, 255, 102, 0.1); color: #00ff66; }
+        .status-pending { background-color: rgba(255, 170, 0, 0.1); color: #ffaa00; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>LIVE SQL DATA STREAM</h1>
+            <div class="status-badge">Engine Active</div>
+        </header>
+
+        <!-- Dynamic Overview Metric Cards -->
+        <div class="metrics-grid">
+            <div class="card">
+                <div class="card-title">Total Orders processed</div>
+                <div class="card-value">04</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Gross Revenue (PKR)</div>
+                <div class="card-value">90,000</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Active Projects</div>
+                <div class="card-value">03</div>
+            </div>
+        </div>
+
+        <!-- Main Data Fleet Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Item Name</th>
+                        <th>Category</th>
+                        <th>Price (PKR)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="data-rows">
+            <tr>
+                <td>1</td>
+                <td>Premium UI Kit</td>
+                <td>Design</td>
+                <td>12,000</td>
+                <td><span class="status-pill status-completed">Completed</span></td>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td>Automation Script</td>
+                <td>Development</td>
+                <td>35,000</td>
+                <td><span class="status-pill status-pending">Pending</span></td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
+                <td>SQL Backup Tool</td>
+                <td>DevOps</td>
+                <td>25,000</td>
+                <td><span class="status-pill status-completed">Completed</span></td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>Minimalist Portfolio</td>
+                <td>Design</td>
+                <td>18,000</td>
+                <td><span class="status-pill status-completed">Completed</span></td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
